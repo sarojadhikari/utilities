@@ -6,8 +6,15 @@
 
 # define useful functions
 import numpy as np
-from scipy.special import erfc
-from scipy.special import sph_jn
+from scipy.special import erfc, sph_jn, hyp2f1, gamma
+
+def hyp2f1Reg(a,b,c,z):
+    """
+    return the regularized gauss hypergeometric function
+    hypergeometric2F1Regularized in Mathematica
+    simply equals hyp2f1(a,b,c,z)/Gamma(c)
+    """
+    return hyp2f1(a,b,c,z)/gamma(c)
 
 def BesselJ(n, x):
     """
