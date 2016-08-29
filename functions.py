@@ -6,7 +6,9 @@
 
 # define useful functions
 import numpy as np
-from scipy.special import erfc, sph_jn, hyp2f1, gamma
+from scipy.special import erfc, sph_jn, gamma
+from sympy import mpmath
+from mpmath import hyp2f1
 
 def hyp2f1Reg(a,b,c,z):
     """
@@ -18,7 +20,7 @@ def hyp2f1Reg(a,b,c,z):
 
 def BesselJ(n, x):
     """
-    return the spherical harmonics (J_n(x))
+    return the spherical Bessel function of the first kind (J_n(x))
     """
     return sph_jn(n,x)[0][-1]
 
