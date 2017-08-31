@@ -141,3 +141,9 @@ def degsq2rad(degsq=41253, f=1.0):
     convert degsq to radsq
     """
     return deg2rad(degsq)**2.0*f
+
+def delta(i,j):
+    if (i==j):
+        return 1.
+    else:
+        return 0.
