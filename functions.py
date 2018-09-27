@@ -6,8 +6,8 @@
 
 # define useful functions
 import numpy as np
-from scipy.special import erfc, sph_jn, gamma
-from sympy import mpmath
+from scipy.special import erfc, spherical_jn, gamma
+import mpmath
 from mpmath import hyp2f1
 
 def hyp2f1Reg(a,b,c,z):
